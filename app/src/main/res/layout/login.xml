@@ -11,6 +11,7 @@
         android:layout_width="375dp"
         android:layout_height="326dp"
         android:layout_marginBottom="428dp"
+        android:contentDescription="InfoStudent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,12 +34,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="140dp"
         android:ems="10"
-        android:text="Usuario"
+        android:hint="Usuario"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
         android:textColor="#EFDEDE"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/password"
@@ -46,12 +49,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
         android:ems="10"
-        android:text="Contraseña"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
         android:textColor="#EDE8E8"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:inputType="TODO" />
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/createText"
@@ -70,16 +75,21 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="645dp" />
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
         android:text="Olvide mi contraseña"
         android:textColor="#F3EDED"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="609dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
