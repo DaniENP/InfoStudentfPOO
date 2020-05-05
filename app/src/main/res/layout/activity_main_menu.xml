@@ -47,7 +47,9 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
 
     <TextView
         android:id="@+id/profileEmail"
@@ -62,7 +64,9 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
 
     <TextView
         android:id="@+id/profilePhone"
@@ -76,7 +80,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:layout_marginStart="8dp" />
 
     <TextView
         android:id="@+id/verifyMsg"
@@ -127,7 +132,9 @@
         android:textColor="#E3D3D3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -139,7 +146,9 @@
         android:textColor="#E3D3D3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -150,6 +159,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImage"
         app:layout_constraintVertical_bias="0.050000012"
+        android:layout_marginStart="16dp" />
 
 
     <ImageView
@@ -160,6 +170,7 @@
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileName"
+        android:layout_marginStart="16dp" />
 
 
     <ImageView
@@ -170,6 +181,7 @@
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileEmail"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -181,7 +193,9 @@
         android:textColor="#E3D3D3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
 
     <Button
         android:id="@+id/changeProfile"
