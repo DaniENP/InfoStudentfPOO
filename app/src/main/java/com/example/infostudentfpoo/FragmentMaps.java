@@ -39,9 +39,11 @@ public class FragmentMaps extends SupportMapFragment implements OnMapReadyCallba
     @Override
     public void onMapReady(GoogleMap googleMap) {
         LatLng latLng = new LatLng(lat, lon);
+        LatLng latLngUN = new LatLng(4.6382,74.0840);
 
         float zoom = 17;
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,zoom));
+        //googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLngUN,zoom));
 
         googleMap.getUiSettings().setZoomControlsEnabled(true);
         googleMap.addMarker(new MarkerOptions().position(latLng));

@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.nio.charset.MalformedInputException;
+
 public class Localizacion implements LocationListener {
 
 
@@ -30,7 +32,7 @@ public class Localizacion implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
-        // metodo se ejecuta cuando el GPs recibe nuevas coordenadas
+        // metodo se ejecuta cuando el GPS recibe nuevas coordenadas
         String Texto = "Mi ubicación es: /n"
                 + "Latitud = " + location.getLatitude() + "/n"
                 + "Longitud = " + location.getLongitude();
