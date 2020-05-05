@@ -38,9 +38,10 @@
         android:layout_marginBottom="284dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="Telefono"
         android:inputType="textPhonetic"
-        android:text="Telefono"
         android:textColor="#EFDEDE"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -50,13 +51,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="432dp"
+        android:autofillHints=""
         android:ems="10"
-        android:text="Correo Electronico"
+        android:hint="Correo Electronico"
+        android:inputType="textEmailAddress"
         android:textColor="#EFDEDE"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/password"
@@ -64,11 +67,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="356dp"
         android:ems="10"
-        android:text="Contraseña"
-        android:textColor="#EFDEDE"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/fullName"
@@ -76,11 +82,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="504dp"
         android:ems="10"
-        android:text="Nombre Completo"
+        android:hint="Nombre Completo"
+        android:inputType="textPersonName"
         android:textColor="#EFDEDE"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/textView"
