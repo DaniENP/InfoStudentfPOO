@@ -1,5 +1,6 @@
 package com.example.infostudentfpoo;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,7 +37,7 @@ import com.squareup.picasso.Picasso;
 
 import javax.annotation.Nullable;
 
-public class MainAutenticate extends AppCompatActivity {
+public class MainMenu extends AppCompatActivity {
     private static final int GALLERY_INTENT_CODE = 1023 ;
     TextView fullName,email,phone,verifyMsg;
     FirebaseAuth fAuth;
@@ -52,7 +53,7 @@ public class MainAutenticate extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_menu);
         phone = findViewById(R.id.profilePhone);
         fullName = findViewById(R.id.profileName);
         email    = findViewById(R.id.profileEmail);
@@ -142,12 +143,12 @@ public class MainAutenticate extends AppCompatActivity {
                         user.updatePassword(newPassword).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(MainAutenticate.this, "Password Reset Successfully.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainMenu.this, "Password Reset Successfully.", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(MainAutenticate.this, "Password Reset Failed.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainMenu.this, "Password Reset Failed.", Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
