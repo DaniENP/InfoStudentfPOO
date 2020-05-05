@@ -10,54 +10,76 @@
         android:id="@+id/imageView3"
         android:layout_width="375dp"
         android:layout_height="326dp"
-        app:srcCompat="@drawable/infostudentf__1_"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="-3dp" />
+        android:layout_marginBottom="428dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/infostudentf__1_" />
 
     <Button
-        android:id="@+id/IngresarB"
+        android:id="@+id/loginBtn"
         android:layout_width="136dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="176dp"
+        android:layout_marginBottom="212dp"
         android:text="Ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/UserB"
+        android:id="@+id/Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="140dp"
         android:ems="10"
         android:text="Usuario"
         android:textColor="#EFDEDE"
-        app:layout_constraintBottom_toTopOf="@+id/IngresarB"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/ContraB"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
         android:ems="10"
         android:text="Contraseña"
         android:textColor="#EDE8E8"
-        app:layout_constraintBottom_toTopOf="@+id/IngresarB"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="TODO" />
 
     <TextView
-        android:id="@+id/RegitrarAqui"
+        android:id="@+id/createText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿No estas registrado? Haz click aqui"
+        android:text="@string/no_estas_registrado_haz_click_aqui"
         android:textColor="#E8DFDF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IngresarB" />
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="645dp" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olvide mi contraseña"
+        android:textColor="#F3EDED"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="609dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

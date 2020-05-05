@@ -51,4 +51,7 @@ public class FragmentMaps extends SupportMapFragment implements OnMapReadyCallba
 
 
     }
+
+    public static class MainActivity {
+    }
 }
