@@ -36,7 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="284dp"
+        android:autofillHints=""
         android:ems="10"
+        android:inputType="textPhonetic"
         android:text="Telefono"
         android:textColor="#EFDEDE"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +55,8 @@
         android:textColor="#EFDEDE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/password"
@@ -83,10 +86,13 @@
         android:id="@+id/textView"
         android:layout_width="209dp"
         android:layout_height="61dp"
+        android:layout_marginTop="52dp"
         android:fontFamily="@font/aclonica"
         android:text="Registro"
         android:textColor="#FAF0F0"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="78dp" />
+        app:layout_constraintBottom_toTopOf="@+id/fullName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
