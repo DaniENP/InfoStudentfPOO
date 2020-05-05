@@ -32,8 +32,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+
 
 import javax.annotation.Nullable;
 
@@ -48,6 +48,7 @@ public class MainMenu extends AppCompatActivity {
     FirebaseUser user;
     ImageView profileImage;
     StorageReference storageReference;
+
 
 
     @Override

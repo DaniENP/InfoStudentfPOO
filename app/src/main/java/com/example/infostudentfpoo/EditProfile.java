@@ -19,6 +19,12 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -92,7 +98,7 @@ public class EditProfile extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(EditProfile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                startActivity(new Intent(getApplicationContext(),MainMenu.class));
                                 finish();
                             }
                         });
