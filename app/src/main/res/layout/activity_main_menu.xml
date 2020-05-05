@@ -24,10 +24,11 @@
         app:layout_constraintVertical_bias="0.076" />
 
     <ImageView
-        android:src="@drawable/ic_person_black_24dp"
         android:id="@+id/profileImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:src="@drawable/ic_person_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
