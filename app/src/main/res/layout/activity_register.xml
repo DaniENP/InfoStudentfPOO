@@ -60,36 +60,38 @@
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintVertical_bias="0.171" />
 
     <EditText
         android:id="@+id/Email"
         android:layout_width="252dp"
         android:layout_height="38dp"
+        android:layout_marginBottom="20dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Correo Electronico"
         android:inputType="textEmailAddress"
         android:textColor="#EFDEDE"
         android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="255dp" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="253dp"
         android:layout_height="40dp"
+        android:layout_marginBottom="164dp"
         android:ems="10"
         android:hint="Contraseña"
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+        app:layout_constraintBottom_toTopOf="@+id/RegisterBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="315dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/fullName"
