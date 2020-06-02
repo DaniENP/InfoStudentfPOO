@@ -10,23 +10,24 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="329dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="36dp"
         android:onClick="logout"
         android:text="Cerrar Sesion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.606"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetPasswordLocal"
+        app:layout_constraintVertical_bias="0.076" />
 
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:src="@drawable/ic_person_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,6 @@
         android:id="@+id/profilePhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:text="Tu numero de telefono"
@@ -81,7 +81,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:layout_marginStart="8dp" />
 
     <TextView
         android:id="@+id/verifyMsg"
@@ -111,15 +112,16 @@
 
     <Button
         android:id="@+id/resetPasswordLocal"
-        android:layout_width="162dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_width="201dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
         android:text="Cambiar Contraseña"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profilePhone"
-        app:layout_constraintVertical_bias="0.623" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/textView3"
@@ -199,15 +201,15 @@
     <Button
         android:id="@+id/changeProfile"
         android:layout_width="156dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="EDITAR PERFIL"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/resetPasswordLocal"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profilePhone"
-        app:layout_constraintVertical_bias="0.626" />
+        app:layout_constraintVertical_bias="0.185" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
