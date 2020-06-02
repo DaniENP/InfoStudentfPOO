@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image">
+    android:background="@drawable/image"
+    tools:context=".Login">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="375dp"
         android:layout_height="326dp"
-        android:layout_marginBottom="428dp"
+        android:layout_marginBottom="416dp"
         android:contentDescription="InfoStudent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/infostudentf__1_" />
 
@@ -32,31 +34,31 @@
         android:id="@+id/Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
         android:ems="10"
         android:hint="Usuario"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:textColor="#EFDEDE"
         android:textColorHint="@color/common_google_signin_btn_text_dark_default"
-        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        tools:layout_editor_absoluteX="99dp" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="52dp"
         android:ems="10"
         android:hint="Contraseña"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         android:textColor="#EDE8E8"
         android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/createText"
@@ -75,11 +77,12 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
 
     <TextView
         android:id="@+id/forgotPassword"
