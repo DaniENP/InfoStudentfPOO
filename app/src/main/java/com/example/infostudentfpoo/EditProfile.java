@@ -81,7 +81,7 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(profileFullName.getText().toString().isEmpty() || profileEmail.getText().toString().isEmpty() || profilePhone.getText().toString().isEmpty()){
-                    Toast.makeText(EditProfile.this, "One or Many fields are empty.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EditProfile.this, "Uno o mas campos vacios.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -97,12 +97,12 @@ public class EditProfile extends AppCompatActivity {
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(EditProfile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditProfile.this, "Perfil actualizado", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(),MainMenu.class));
                                 finish();
                             }
                         });
-                        Toast.makeText(EditProfile.this, "Email is changed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditProfile.this, "Email guardado.", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

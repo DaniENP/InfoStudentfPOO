@@ -25,25 +25,25 @@
         android:id="@+id/createText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
         android:text="¿Ya tienes una cuenta? Haz click aqui"
         android:textColor="#E8DFDF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterBtn"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839" />
 
     <Button
         android:id="@+id/RegisterBtn"
         android:layout_width="136dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="136dp"
         android:text="Crear Cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.784" />
 
     <EditText
         android:id="@+id/phone"
@@ -57,16 +57,15 @@
         android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toTopOf="@+id/RegisterBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.171" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.929" />
 
     <EditText
         android:id="@+id/Email"
         android:layout_width="252dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="20dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Correo Electronico"
@@ -75,29 +74,32 @@
         android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.941" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="253dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="164dp"
         android:ems="10"
         android:hint="Contraseña"
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textColorHint="@color/common_google_signin_btn_text_dark_default"
-        app:layout_constraintBottom_toTopOf="@+id/RegisterBtn"
+        app:layout_constraintBottom_toTopOf="@+id/phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
 
     <EditText
         android:id="@+id/fullName"
         android:layout_width="253dp"
         android:layout_height="42dp"
-        android:layout_marginTop="180dp"
         android:ems="10"
         android:hint="Nombre Completo"
         android:importantForAutofill="no"
@@ -106,22 +108,22 @@
         android:textColorHint="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toTopOf="@+id/Email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.935" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="209dp"
         android:layout_height="61dp"
-        android:layout_marginTop="52dp"
         android:fontFamily="@font/aclonica"
         android:text="Registro"
         android:textColor="#FAF0F0"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/fullName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.149" />
 </androidx.constraintlayout.widget.ConstraintLayout>

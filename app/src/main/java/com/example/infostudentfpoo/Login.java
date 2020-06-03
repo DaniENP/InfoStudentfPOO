@@ -51,17 +51,17 @@ public class Login extends AppCompatActivity {
                 String password = mPassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email)){
-                    mEmail.setError("Email is Required.");
+                    mEmail.setError("Se necesita un email.");
                     return;
                 }
 
                 if(TextUtils.isEmpty(password)){
-                    mPassword.setError("Password is Required.");
+                    mPassword.setError("Ingrese Contraseña.");
                     return;
                 }
 
                 if(password.length() < 6){
-                    mPassword.setError("Password Must be >= 6 Characters");
+                    mPassword.setError("La contrasseña dede tener al menos 6 caracteres");
                     return;
                 }
 
@@ -73,7 +73,7 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(Login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Inicio exitoso", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),MainMenu.class));
                         }else {
                             Toast.makeText(Login.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -99,11 +99,11 @@ public class Login extends AppCompatActivity {
 
                 final EditText resetMail = new EditText(v.getContext());
                 final AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
-                passwordResetDialog.setTitle("Reset Password ?");
-                passwordResetDialog.setMessage("Enter Your Email To Received Reset Link.");
+                passwordResetDialog.setTitle("¿Restablecer contraseña?");
+                passwordResetDialog.setMessage("Ingresa email para recibir link de recuperacion.");
                 passwordResetDialog.setView(resetMail);
 
-                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                passwordResetDialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // extract the email and send reset link
@@ -111,12 +111,12 @@ public class Login extends AppCompatActivity {
                         fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(Login.this, "Reset Link Sent To Your Email.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Link de recuperacion enviado.", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(Login.this, "Error ! Reset Link is Not Sent" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Error ! El correo no se ha enviado" + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
 

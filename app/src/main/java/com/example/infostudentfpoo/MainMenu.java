@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
@@ -94,12 +96,12 @@ public class MainMenu extends AppCompatActivity {
                     user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(v.getContext(), "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(v.getContext(), "Se ha enviado el link de verificacion.", Toast.LENGTH_SHORT).show();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Log.d("tag", "onFailure: Email not sent " + e.getMessage());
+                            Log.d("tag", "onFailure: Email no enviado " + e.getMessage());
                         }
                     });
                 }
@@ -119,7 +121,7 @@ public class MainMenu extends AppCompatActivity {
                     email.setText(documentSnapshot.getString("email"));
 
                 }else {
-                    Log.d("tag", "onEvent: Document do not exists");
+                    Log.d("tag", "onEvent: Documento no existe");
                 }
             }
         });
@@ -132,11 +134,12 @@ public class MainMenu extends AppCompatActivity {
                 final EditText resetPassword = new EditText(v.getContext());
 
                 final AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
-                passwordResetDialog.setTitle("Reset Password ?");
-                passwordResetDialog.setMessage("Enter New Password > 6 Characters long.");
+
+                passwordResetDialog.setTitle("¿Restablecer contraseña?");
+                passwordResetDialog.setMessage("Ingrese la nueva contraseña (al menos 6 caracteres).");
                 passwordResetDialog.setView(resetPassword);
 
-                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                passwordResetDialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // extract the email and send reset link
@@ -144,12 +147,12 @@ public class MainMenu extends AppCompatActivity {
                         user.updatePassword(newPassword).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(MainMenu.this, "Password Reset Successfully.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainMenu.this, "Contraseña reestablecida.", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(MainMenu.this, "Password Reset Failed.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainMenu.this, "Error en restablecer contraseña.", Toast.LENGTH_SHORT).show();
                             }
                         });
                     }

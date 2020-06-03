@@ -69,17 +69,17 @@ public class Register extends AppCompatActivity {
                 final String phone    = mPhone.getText().toString();
 
                 if(TextUtils.isEmpty(email)){
-                    mEmail.setError("Email is Required.");
+                    mEmail.setError("Se necesita un email.");
                     return;
                 }
 
                 if(TextUtils.isEmpty(password)){
-                    mPassword.setError("Password is Required.");
+                    mPassword.setError("Ingrese una contraseña.");
                     return;
                 }
 
                 if(password.length() < 6){
-                    mPassword.setError("Password Must be >= 6 Characters");
+                    mPassword.setError("La contraseña debe tener al menos 6 caracteres");
                     return;
                 }
 
@@ -98,16 +98,16 @@ public class Register extends AppCompatActivity {
                             fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
-                                    Toast.makeText(Register.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Register.this, "Email de verificacion ha sido enviado.", Toast.LENGTH_SHORT).show();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
+                                    Log.d(TAG, "onFailure: El email no se ha enviado " + e.getMessage());
                                 }
                             });
 
-                            Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "Usuario creado.", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
                             DocumentReference documentReference = fStore.collection("users").document(userID);
                             Map<String,Object> user = new HashMap<>();
@@ -117,7 +117,7 @@ public class Register extends AppCompatActivity {
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
-                                    Log.d(TAG, "onSuccess: user Profile is created for "+ userID);
+                                    Log.d(TAG, "onSuccess: usuario creado para "+ userID);
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
