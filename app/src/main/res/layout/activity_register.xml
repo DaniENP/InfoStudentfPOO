@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/image"
+    android:fitsSystemWindows="true"
     tools:context=".Register">
 
 
@@ -35,6 +36,7 @@
 
     <Button
         android:id="@+id/RegisterBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="136dp"
         android:layout_height="64dp"
         android:text="Crear Cuenta"
