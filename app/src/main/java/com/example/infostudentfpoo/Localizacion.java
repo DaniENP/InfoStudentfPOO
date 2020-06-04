@@ -14,6 +14,8 @@ import java.nio.charset.MalformedInputException;
 
 public class Localizacion implements LocationListener {
 
+    //chingada
+
 
     MainActivity mainActivity;
     TextView tvmensaje;
