@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".EditProfile"></activity>
+        <activity android:name=".desplegar"></activity>
+        <activity android:name=".chatroom" />
+        <activity android:name=".Main_Chat" />
+        <activity android:name=".EditProfile" />
         <activity android:name=".Login" />
         <activity android:name=".Register">
             <intent-filter>
