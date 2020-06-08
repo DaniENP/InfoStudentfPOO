@@ -1,7 +1,5 @@
 package com.example.infostudentfpoo;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,7 +35,6 @@ public class Main_Chat extends AppCompatActivity {
     ListView l1;
     ArrayAdapter<String> adapter;
     String name;
-    EditText ee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +49,7 @@ public class Main_Chat extends AppCompatActivity {
 
 
         reference = FirebaseDatabase.getInstance().getReference().getRoot();
-        request_username();
+        name = "hola";
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -95,32 +92,6 @@ public class Main_Chat extends AppCompatActivity {
 
     }
 
-    public void request_username() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Enter your name?");
-        ee = new EditText(this);
-        builder.setView(ee);
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                name = ee.getText().toString();
-
-
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-                request_username();
-
-
-            }
-        });
-        builder.show();
-
-    }
 
 
     public void insert_data(View v) {
