@@ -1,6 +1,7 @@
 package com.example.infostudentfpoo;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -119,18 +120,21 @@ public class chatroom extends AppCompatActivity {
     }
     public void append_chat(DataSnapshot ss)
     {
-        String chat_msg,chat_username;
+        String chat_msg;
+        String chat_username;
         Iterator i = ss.getChildren().iterator();
         while(i.hasNext())
         {
-            chat_msg = ((DataSnapshot)i.next()).getValue().toString();
-            chat_username = ((DataSnapshot)i.next()).getValue().toString();
-            t1.append(chat_username + ": " +chat_msg + " \n");
+            chat_msg = getColoredSpanned(((DataSnapshot)i.next()).getValue().toString(), "#ffffff");
+            chat_username = getColoredSpanned(((DataSnapshot)i.next()).getValue().toString(),"#03dac5");
+            t1.append(Html.fromHtml(chat_username + ": "+ "<br/>" +chat_msg + "<br/>"+ "<br/>"));
         }
     }
 
 
-    public static class despliega {
+    private String getColoredSpanned(String text, String color) {
+        String input = "<font color=" + color + ">" + text + "</font>";
+        return input;
     }
 }
 

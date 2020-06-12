@@ -15,7 +15,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".desplegar"></activity>
         <activity android:name=".chatroom" />
-        <activity android:name=".Main_Chat" />
+        <activity android:name=".MainMenu" />
         <activity android:name=".EditProfile" />
         <activity android:name=".Login" />
         <activity android:name=".Register">
@@ -25,7 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainMenu" />
+        <activity android:name=".Main_Chat" />
 
         <meta-data
             android:name="com.google.android.gms.version"
